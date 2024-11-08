@@ -40,7 +40,7 @@ string input_sentence()
 {
     string sentence;
 
-    cout << "Write a sentence, otherwise just continue working: ";
+    cout << "Write a sentence or leave this space empty: ";
     getline(cin, sentence);
     
 	return sentence;
