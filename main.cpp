@@ -77,8 +77,10 @@ int print(string sentence, int bg_color)
 
 	while (text_color < 16)
 	{
-		SetConsoleTextAttribute(hConsole, (WORD)((bg_color << 4) | text_color));
-		cout << " " << text_color << " " << sentence << endl;
+		SetConsoleTextAttribute(hConsole, (WORD)((0 << 4) | 7));
+		cout << (text_color < 10 ? "  " : " ") << text_color << " ";
+		SetConsoleTextAttribute(hConsole, (WORD)((bg_color << 4) | text_color)); 
+		cout << sentence << endl;
 		text_color++;
 	}
 
